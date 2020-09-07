@@ -1,11 +1,17 @@
 import React from 'react';
 
-function DropdownItem({ children, leftIcon, rightIcon }) {
+function DropdownItem(props) {
+  const { children, leftIcon, rightIcon, goToMenu, setActiveMenu } = props;
   return (
-    <button className="menu-item nav-button">
+    <button
+      className="menu-item nav-button"
+      onClick={() => goToMenu && setActiveMenu(goToMenu)}
+    >
       <span className="icon-button">{leftIcon}</span>
       {children}
-      <span className="icon-right">{rightIcon}</span>
+      <span className={rightIcon ? `icon-button icon-right` : `icon-right`}>
+        {rightIcon}
+      </span>
     </button>
   );
 }

@@ -7,7 +7,6 @@ function NavItem({ icon, children }) {
       <button className="icon-button nav-button" onClick={() => setOpen(!open)}>
         {icon}
       </button>
-
       {open && children}
     </li>
   );
