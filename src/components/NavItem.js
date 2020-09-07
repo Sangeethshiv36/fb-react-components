@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function NavItem({ icon }) {
+function NavItem({ icon, children }) {
+  const [open, setOpen] = useState(false);
   return (
     <li className="nav-item">
-      <a href="#" className="icon-button">
+      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         {icon}
       </a>
+
+      {open && children}
     </li>
   );
 }
