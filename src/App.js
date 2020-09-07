@@ -10,8 +10,8 @@ function App() {
     <>
       <Navbar>
         <NavItem icon={<PlusIcon />} />
-        <NavItem icon={<BellIcon />} />
         <NavItem icon={<MessengerIcon />} />
+        <NavItem icon={<BellIcon />} />
       </Navbar>
     </>
   );
