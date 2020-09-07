@@ -33,11 +33,13 @@ a {
   text-decoration: none;
 }
 
-button {
+.nav-button {
   color: var(--text-color);
+  width: 100%;
   text-decoration: none;
   cursor: pointer;
   border: none;
+  background: none;
 }
 
 .navbar {

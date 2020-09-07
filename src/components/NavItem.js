@@ -4,9 +4,9 @@ function NavItem({ icon, children }) {
   const [open, setOpen] = useState(false);
   return (
     <li className="nav-item">
-      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+      <button className="icon-button nav-button" onClick={() => setOpen(!open)}>
         {icon}
-      </a>
+      </button>
 
       {open && children}
     </li>

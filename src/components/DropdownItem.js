@@ -2,11 +2,11 @@ import React from 'react';
 
 function DropdownItem({ children, leftIcon, rightIcon }) {
   return (
-    <a href="#" className="menu-item">
+    <button className="menu-item nav-button">
       <span className="icon-button">{leftIcon}</span>
       {children}
       <span className="icon-right">{rightIcon}</span>
-    </a>
+    </button>
   );
 }
 
