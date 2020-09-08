@@ -1,3 +1,15 @@
+:root {
+  --bg: #242526;
+  --body-bg: #17181a;
+  --bg-accent: #484a4d;
+  --primary-text-color: #e4e6eb;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 300ms;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,21 +17,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-bg);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-:root {
-  --bg: #242526;
-  --bg-accent: #484a4d;
-  --text-color: #dadce1;
-  --nav-size: 60px;
-  --border: 1px solid #474a4d;
-  --border-radius: 8px;
-  --speed: 500ms;
 }
 
 ul {
@@ -35,12 +38,13 @@ a {
 
 .nav-button {
   color: var(--text-color);
-  width: 100%;
+  width: 300px;
   text-decoration: none;
   cursor: pointer;
   border: none;
   background: none;
   outline: none;
+  font-size: 0.9375rem;
 }
 
 .navbar {
@@ -84,8 +88,8 @@ a {
 
 .icon-button svg {
   fill: var(--text-color);
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .dropdown {
@@ -108,6 +112,7 @@ a {
   border-radius: var(--border-radius);
   transition: background var(--speed);
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu-item:hover {
@@ -121,6 +126,8 @@ a {
 
 .menu {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-primary-enter {
@@ -159,4 +166,33 @@ a {
 .menu-secondary-exit-active {
   transform: translateX(110%);
   transition: all var(--speed) ease;
+}
+
+.menu-tertiary-enter {
+  position: absolute;
+  transform: translateX(110%);
+}
+
+.menu-tertiary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.menu-tertiary-exit {
+  position: absolute;
+}
+
+.menu-tertiary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+.option-name {
+  padding: 0.5rem;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  line-height: 20px;
+  margin: -4px 0;
+  gap: normal;
 }

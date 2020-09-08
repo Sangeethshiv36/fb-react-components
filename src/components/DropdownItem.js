@@ -8,7 +8,7 @@ function DropdownItem(props) {
       onClick={() => goToMenu && setActiveMenu(goToMenu)}
     >
       <span className="icon-button">{leftIcon}</span>
-      {children}
+      <span className="option-name">{children}</span>
       <span className={rightIcon ? `icon-button icon-right` : `icon-right`}>
         {rightIcon}
       </span>
