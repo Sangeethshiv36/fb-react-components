@@ -13,6 +13,7 @@ import { ReactComponent as MarketplaceIcon } from './icons/marketplace.svg';
 import { ReactComponent as GamingIcon } from './icons/gaming.svg';
 import DropdownMenu from './components/DropdownMenu';
 import SearchInput from './components/SearchInput';
+import ProfileLink from './components/ProfileLink';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <NavItem centerIcon={true} icon={<GamingIcon />} />
         </div>
         <div className="right-content">
+          <ProfileLink />
           <NavItem icon={<PlusIcon />} />
           <NavItem icon={<MessengerIcon />} />
           <NavItem icon={<BellIcon />} />
