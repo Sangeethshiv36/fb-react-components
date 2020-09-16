@@ -2,8 +2,9 @@ import React from 'react';
 
 function ProfileLink(props) {
   return (
-    <div>
-      <img src="../../public/logo192.png" alt="profile-pic" />
+    <div className="profile-link">
+      <img src="/logo192.png" alt="profile-pic" />
+      <span>Sangeeth</span>
     </div>
   );
 }
