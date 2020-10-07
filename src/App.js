@@ -37,7 +37,7 @@ function App() {
           <NavItem icon={<PlusIcon />} />
           <NavItem icon={<MessengerIcon />} />
           <NavItem icon={<BellIcon />} />
-          <NavItem icon={<CaretIcon />}>
+          <NavItem icon={<CaretIcon />} isDropDown={true}>
             <DropdownMenu />
           </NavItem>
         </div>
